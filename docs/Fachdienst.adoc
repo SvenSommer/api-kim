@@ -1,5 +1,4 @@
 :imagesdir: ../images
-:toc: macro
 :toclevels: 5
 :toc-title: Inhaltsverzeichnis
 :numbered:
