@@ -1,5 +1,5 @@
 :imagesdir: ../images
-:toc: true
+:toc: macro
 :toclevels: 5
 :toc-title: Inhaltsverzeichnis 
 :number-sections: true
