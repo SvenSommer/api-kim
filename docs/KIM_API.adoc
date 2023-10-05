@@ -1,8 +1,8 @@
 :imagesdir: ../images
-:toc: macro
+:toc: true
 :toclevels: 5
 :toc-title: Inhaltsverzeichnis 
-:numbered:
+:number-sections: true
 
 image:gematik_logo.svg[width=70%]
 
