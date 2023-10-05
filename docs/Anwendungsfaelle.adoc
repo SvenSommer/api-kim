@@ -14,7 +14,7 @@ endif::[]
 
 image:gematik_logo.svg[width=70%]
 
-toc:[]
+toc::[]
 
 = Anwendungsfälle
 Die hier beschriebenen Anwendungsfälle gelten ab KIM 1.5. Die dargestellen Sequenzdiagramme dienen nur zum allgemeinen Verständnis und berücksichtigen nicht alle Kommunikationspartner (z. B. DNS-Services-Lokalisierung). Die in den Sequenzdiagrammen dargestellten Operationen 
