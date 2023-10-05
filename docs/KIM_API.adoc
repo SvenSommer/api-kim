@@ -4,18 +4,17 @@
 :toc-title: Inhaltsverzeichnis 
 :number-sections: true
 :numbered: true
-:maxdepth: 2
 
 image:gematik_logo.svg[width=70%]
 
 toc::[]
 
 
-= Clientsystem
+# Clientsystem
 Beginnend mit der KIM Version 1.5 werden weitere Funktionalitäten im Clientmodul bereitgestellt, die im folgenden Kapitel weiter beschrieben werden. Darüberhinaus kann ab dieser Version das Clientmodul optional in das Primärsystem integriert werden. Zur Sicherstellung der Interoperabilität zwischen den Clientmodulen und den Fachdiensten wird eine weitere Schnittstelle durch die gematik am Account Manager normativ festgelegt. Diese wird durch das Administrationsmodul aufgerufen und ermöglicht die Konfiguration der Nutzer-Accounts.
 
-== Änderungen im Clientmodul ab KIM 1.5
-=== Optionale Integration in das Clientsystem
+## Änderungen im Clientmodul ab KIM 1.5
+### Optionale Integration in das Clientsystem
 
 Ab der KIM Version 1.5 ist es möglich das Clientmodul in ein Clientsystem zu integrieren. Ein seperates Clientmodul ist in diesem Fall nicht mehr notwendig.
 
