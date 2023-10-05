@@ -4,6 +4,7 @@
 :toc-title: Inhaltsverzeichnis 
 :number-sections: true
 :numbered: true
+:maxdepth: 4
 
 image:gematik_logo.svg[width=70%]
 
