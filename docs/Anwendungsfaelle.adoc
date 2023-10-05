@@ -10,7 +10,6 @@ endif::[]
 :toc: macro
 :toclevels: 3
 :toc-title: Inhaltsverzeichnis
-:numbered:
 
 image:gematik_logo.svg[width=70%]
 
