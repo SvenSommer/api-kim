@@ -1,4 +1,5 @@
 :imagesdir: ../images
+:toc: true
 :toclevels: 5
 :toc-title: Inhaltsverzeichnis
 :numbered:
