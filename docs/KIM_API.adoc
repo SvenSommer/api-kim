@@ -3,7 +3,7 @@
 :toclevels: 5
 :toc-title: Inhaltsverzeichnis 
 :number-sections: true
-:numbered: true
+:numbered:
 
 image:gematik_logo.svg[width=70%]
 
