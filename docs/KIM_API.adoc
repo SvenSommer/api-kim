@@ -10,25 +10,25 @@ image:gematik_logo.svg[width=70%]
 toc::[]
 
 
-= Clientsystem
+# Clientsystem
 Beginnend mit der KIM Version 1.5 werden weitere Funktionalitäten im Clientmodul bereitgestellt, die im folgenden Kapitel weiter beschrieben werden. Darüberhinaus kann ab dieser Version das Clientmodul optional in das Primärsystem integriert werden. Zur Sicherstellung der Interoperabilität zwischen den Clientmodulen und den Fachdiensten wird eine weitere Schnittstelle durch die gematik am Account Manager normativ festgelegt. Diese wird durch das Administrationsmodul aufgerufen und ermöglicht die Konfiguration der Nutzer-Accounts.
 
-== Änderungen im Clientmodul ab KIM 1.5
-=== Optionale Integration in das Clientsystem
+## Änderungen im Clientmodul ab KIM 1.5
+### Optionale Integration in das Clientsystem
 
 Ab der KIM Version 1.5 ist es möglich das Clientmodul in ein Clientsystem zu integrieren. Ein seperates Clientmodul ist in diesem Fall nicht mehr notwendig.
 
-=== Umgang mit E-Mail-Kategorien
+### Umgang mit E-Mail-Kategorien
 
 Für die automatisierte Auswertung der KIM-Mails auf Seiten des Empfängers werden die KIM-Mails mit einer KIM-Dienstkennung markiert (z. B. bei der eAU). Hierfür wird die Dienstkennung als Bestandteil in den äußeren Header (`X-KIM-Dienstkennung`) der KIM-Mail übernommen. Die Benennung der zu verwendenden Dienstkennungen erfolgt durch den Mail-Client. Wurde durch den Mail-Client keine Dienstkennung gesetzt, dann wird durch das Clientmodul eine Default-Dienstkennung eingetragen. Die Anpassungen sind in *[gemSpec_CM_KOMLE#3.6]* und *[gemSMIME_KOMLE#2.1.1.1]* spezifiziert. 
 
 Eine Übersicht über alle Dienstkennungen kann hier eingesehen werden: link:https://fachportal.gematik.de/toolkit/dienstkennung-kim-kom-le[Dienstkennungen]
 
-=== Umgang mit großen Anhängen
+### Umgang mit großen Anhängen
 
 E-Mails mit einer Gesamtgröße bis zu 15 MiB werden entsprechend den Festlegungen im KIM 1.0 behandelt. Übersteigt die Größe einer E-Mail die 15 MiB Grenze, wird die gesamte Client-Mail auf dem KOM-LE-Attachment-Service (KAS) des Fachdiensts des Absenders abgelegt. Das Clientmodul ersetzt den Body der originalen Mail mit der KIM-Attachment Datenstruktur und versendet diese nach der weiteren Verarbeitung durch das Clientmodul als KOM-LE Nachricht an den Fachdienst. Das KIM-Clientmodul des Empfängers erkennt den Link in der KIM-Attachment Datenstruktur, lädt die E-Mail-Daten vom KAS des Absenders und entschlüsselt sie. Die damit wieder hergestellte originale Client-Mail wird dem Mail-Client des Empfängers zugestellt. Der Umgang mit großen Anhängen ist in *[gemSpec_CM_KOMLE#3.2]* spezifiziert. Die vom KAS dazu bereitgestellte Schnittstelle wird im folgenden genauer beschrieben.
 
-==== I_Attachment_Service
+#### I_Attachment_Service
 
 Über die Schnittstelle `I_Attachment_Service` stellt der KAS dem Clientmodul die logischen Operationen `add_Attachment()`, und `read_Attachment()` zum Hoch- und Herunterladen von verschlüsselten E-Mail-Daten zur Verfügung. Im folgenden Kapitel wird der Aufruf der Operationen beschrieben.
 
